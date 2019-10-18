@@ -14,15 +14,16 @@ public class PageCounter extends HttpServlet {
         PrintWriter out = response.getWriter();
         out.println("<h1>This is a " + count + "</h1>");
     }
+
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String reset = request.getParameter("reset");
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
         count++;
         if (reset != null){
-            if(Integer.parseInt(reset) == 1){
+//            if(Integer.parseInt(reset) == 1){
                 count = 0;
-            }
+//            }
         }
 
 
